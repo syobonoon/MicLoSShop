@@ -1,0 +1,26 @@
+name: MicLoSShop
+version: '${project.version}'
+main: net.syobonoon.plugin.miclosshop.MicLoSShop
+api-version: 1.18
+
+commands:
+  dshop:
+    description: You can get the shop.
+    permission: miclosshop.dshop
+    permission-message: You don't have <permission>
+    usage: /<command> ShopName custom_model_number
+  dshopreload:
+    description: MicLoS Shop reload.
+    permission: miclosshop.reload
+    permission-message: You don't have <permission>
+    usage: /<command>
+
+permissions:
+  miclosshop.*:
+    children:
+      miclosshop.dshop: true
+      miclosshop.reload: true
+  miclosshop.dshop:
+    default: op
+  miclosshop.reload:
+    default: op
